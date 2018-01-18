@@ -86,4 +86,70 @@ WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
 $ git log --oneline
 740c8d0 (HEAD -> master) first commit
 
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git add .
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   templates/test.html
+
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git commit -m "second commit"
+[master 7e8ce93] second commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 templates/test.html
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git log --oneline
+7e8ce93 (HEAD -> master) second commit
+740c8d0 first commit
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git add .
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   index.html
+        modified:   templates/test.html
+
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git commit -m "third commit"
+[master 128c29b] third commit
+ 2 files changed, 11 insertions(+)
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git log --oneline
+128c29b (HEAD -> master) third commit
+7e8ce93 second commit
+740c8d0 first commit
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git checkout 7e8ce93 index.html
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   index.html
+
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git reset HEAD index.html
+Unstaged changes after reset:
+M       index.html
+
+WAA@LAPTOP-H3F0BI5A MINGW64 ~/Downloads/git-test (master)
+$ git checkout --index.html
+
 
